@@ -1,0 +1,27 @@
+## Configuration Reference
+
+This is the [Traffic Policy](/docs/http/traffic-policy/) configuration
+reference for this action.
+
+### Action Type
+
+`forward-internal`
+
+### Configuration Fields
+
+| Parameter  | Type                 | Description                                                                                                                |
+| ---------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `binding`  | `string`             | The string `private`.                                                                                                      |
+| `url`      | `string`             | **Required.** The endpoint to forward to, such as `http://my-private-endpoint.private:1234`                                |
+| `on_error` | 'halt' \| 'continue' | Whether a forward error is terminal (halts the action), or whether the policy continues to process later actions on error. |
+
+### Supported Directions
+
+- `inbound`
+
+### Supported Schemes
+
+- `https`
+- `http`
+- `tcp`
+- `tls`
